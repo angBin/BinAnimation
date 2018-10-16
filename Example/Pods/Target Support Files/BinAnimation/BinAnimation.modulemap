@@ -1,0 +1,6 @@
+framework module BinAnimation {
+  umbrella header "BinAnimation-umbrella.h"
+
+  export *
+  module * { export * }
+}

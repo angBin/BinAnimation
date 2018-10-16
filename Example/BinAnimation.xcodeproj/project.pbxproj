@@ -62,11 +62,11 @@
 		81930760A19D2D47485E1E7F /* Pods_BinAnimation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinAnimation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A7D425DDF8EDCFF228502EB /* Pods-BinAnimation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinAnimation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinAnimation_Tests/Pods-BinAnimation_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A9DD4D3FBC853FA02F6D3D7F /* BinAnimation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BinAnimation.podspec; path = ../BinAnimation.podspec; sourceTree = "<group>"; };
+		A9DD4D3FBC853FA02F6D3D7F /* BinAnimation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BinAnimation.podspec; path = ../BinAnimation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3C8BABD37D7F41FC419FD53 /* Pods-BinAnimation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinAnimation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinAnimation_Tests/Pods-BinAnimation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A1A2913FE4A6A6EC67C427 /* Pods-BinAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinAnimation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinAnimation_Example/Pods-BinAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E843E3EDA0425C4AEFBB81BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EBB1BB6BDBC169B001072F63 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E843E3EDA0425C4AEFBB81BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EBB1BB6BDBC169B001072F63 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
