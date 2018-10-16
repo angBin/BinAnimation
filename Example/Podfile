@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'BinAnimation_Example' do
+  pod 'BinAnimation', :path => '../'
+
+  target 'BinAnimation_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+    pod 'FBSnapshotTestCase'
+  end
+end
