@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 angBin. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface BinAppDelegate : UIResponder <UIApplicationDelegate>
 

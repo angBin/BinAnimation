@@ -7,8 +7,11 @@
 //
 
 #import "BinViewController.h"
+#import "BinAnimation.h"
 
 @interface BinViewController ()
+
+@property (nonatomic, strong) UIView *testView;
 
 @end
 
@@ -18,6 +21,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.testView = [[UIView alloc] initWithFrame:CGRectMake(120, 250, 100, 100)];
+    self.testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.testView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.testView.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
+        founder.toKeyframe.scaleX(0.5).scaleY(0.5).keyTime(1.0).autoreverses(YES).duration(CGFLOAT_MAX).removedOnCompletion(NO);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

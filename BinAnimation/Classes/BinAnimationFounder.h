@@ -33,7 +33,7 @@
 
 - (BinSpringAnimationFactory *)springAnimation;
 
-- (BinSpringAnimationFactory *(^)(NSString *keyPath))moreSpringAnimation;
+- (BinSpringAnimationFactory *(^)(NSString *keyPath))moreSpringAnimation API_AVAILABLE(ios(9.0));
 
 - (BinTransitionFactory *)transition;
 

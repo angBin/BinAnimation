@@ -101,7 +101,7 @@ NSString *const BinKeyframeAnimationGetKeyframeAnimationFirstValue = @"getKeyfra
 - (id)getKeyframeAnimationFirstValue:(NSString *)keyPath {
     NSInteger keyPathNumber = [self.keyPathDic[keyPath] integerValue];
     if (!keyPathNumber) {
-        BALog(@"The key path (%@) is not supported, so it will be set at \"transform\".", keyPath);
+        BALog(@"The key path (%@) is not supported, so it will be set at 'transform'.", keyPath);
         keyPathNumber = 1;
     }
     id value = nil;

@@ -111,7 +111,12 @@
 - (BinSpringAnimationFactory *(^)(NSString *))moreSpringAnimation {
     return ^id(NSString *keyPath) {
         BinSpringAnimationFactory *springAnimationFactory = [self springAnimation];
-        ((CASpringAnimation *)_animationArr.lastObject).keyPath = keyPath;
+        if (@available(iOS 9.0, *)) {
+            ((CASpringAnimation *)_animationArr.lastObject).keyPath = keyPath;
+        } else {
+            BALog(@"'BinSpringAnimation' is only available on iOS 9.0 or newer.");
+            return nil;
+        }
         return springAnimationFactory;
     };
 }
