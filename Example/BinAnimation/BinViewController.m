@@ -17,25 +17,25 @@
 
 @implementation BinViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.testView = [[UIView alloc] initWithFrame:CGRectMake(120, 250, 100, 100)];
+    self.testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.testView.center = self.view.center;
     self.testView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.testView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     [self.testView.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
-        founder.toKeyframe.scaleX(0.5).scaleY(0.5).keyTime(1.0).autoreverses(YES).duration(CGFLOAT_MAX).removedOnCompletion(NO);
+        founder.toKeyframe.scaleX(0.5).scaleY(0.5).keyTime(0.5).autoreverses(YES).repeatCount(CGFLOAT_MAX);
     }];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

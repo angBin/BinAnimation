@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BinAppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([BinAppDelegate class]));
     }
