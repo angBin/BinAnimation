@@ -7,11 +7,21 @@
 //
 
 #import "BinAppDelegate.h"
+#import "BinViewController.h"
 
 @implementation BinAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    BinViewController *viewC = [[BinViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:viewC];
+    self.window.rootViewController = navC;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

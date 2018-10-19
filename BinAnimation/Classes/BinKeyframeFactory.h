@@ -40,13 +40,13 @@ FOUNDATION_EXTERN NSString *const BinKeyframeGetKeyframe;
 /**
  Property.
  */
-- (BinKeyframeFactory *(^)(float pt))border_width;
+- (BinKeyframeFactory *(^)(float pt))borderWidth;
 - (BinKeyframeFactory *(^)(id contents))contents;
-- (BinKeyframeFactory *(^)(float pt))corner_radius;
+- (BinKeyframeFactory *(^)(float pt))cornerRadius;
 - (BinKeyframeFactory *(^)(float scale))opacity;
-- (BinKeyframeFactory *(^)(float pt))shadow_offset;
-- (BinKeyframeFactory *(^)(float scale))shadow_opacity;
-- (BinKeyframeFactory *(^)(float pt))shadow_radius;
+- (BinKeyframeFactory *(^)(float pt))shadowOffset;
+- (BinKeyframeFactory *(^)(float scale))shadowOpacity;
+- (BinKeyframeFactory *(^)(float pt))shadowRadius;
 - (BinKeyframeFactory *(^)(CGPoint point))position;
 - (BinKeyframeFactory *(^)(float pt))position_x;
 - (BinKeyframeFactory *(^)(float pt))position_y;

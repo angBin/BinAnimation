@@ -5,11 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/BinAnimation.svg?style=flat)](https://cocoapods.org/pods/BinAnimation)
 [![Platform](https://img.shields.io/cocoapods/p/BinAnimation.svg?style=flat)](https://cocoapods.org/pods/BinAnimation)
 
+## Description
+
+This library will provide one simple call way of CAAnimation for users.
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+You can get some simple examples from this repo.
 
 ## Installation
 

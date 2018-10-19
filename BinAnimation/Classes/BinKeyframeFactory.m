@@ -136,7 +136,7 @@ NSString *const BinKeyframeGetKeyframe = @"getKeyframe";
     };
 }
 
-- (BinKeyframeFactory *(^)(float))border_width {
+- (BinKeyframeFactory *(^)(float))borderWidth {
     [self setKeyFrameAnimationKeyPathWithSelector:_cmd];
     return ^id(float pt) {
         _valueTemp = [self get_toValueFromValue:@encode(float), pt];
@@ -151,7 +151,7 @@ NSString *const BinKeyframeGetKeyframe = @"getKeyframe";
     };
 }
 
-- (BinKeyframeFactory *(^)(float))corner_radius {
+- (BinKeyframeFactory *(^)(float))cornerRadius {
     [self setKeyFrameAnimationKeyPathWithSelector:_cmd];
     return ^id(float pt) {
         _valueTemp = [self get_toValueFromValue:@encode(float), pt];
@@ -167,7 +167,7 @@ NSString *const BinKeyframeGetKeyframe = @"getKeyframe";
     };
 }
 
-- (BinKeyframeFactory *(^)(float))shadow_offset {
+- (BinKeyframeFactory *(^)(float))shadowOffset {
     [self setKeyFrameAnimationKeyPathWithSelector:_cmd];
     return ^id(float pt) {
         _valueTemp = [self get_toValueFromValue:@encode(float), pt];
@@ -175,7 +175,7 @@ NSString *const BinKeyframeGetKeyframe = @"getKeyframe";
     };
 }
 
-- (BinKeyframeFactory *(^)(float))shadow_opacity {
+- (BinKeyframeFactory *(^)(float))shadowOpacity {
     [self setKeyFrameAnimationKeyPathWithSelector:_cmd];
     return ^id(float pt) {
         _valueTemp = [self get_toValueFromValue:@encode(float), pt];
@@ -183,7 +183,7 @@ NSString *const BinKeyframeGetKeyframe = @"getKeyframe";
     };
 }
 
-- (BinKeyframeFactory *(^)(float))shadow_radius {
+- (BinKeyframeFactory *(^)(float))shadowRadius {
     [self setKeyFrameAnimationKeyPathWithSelector:_cmd];
     return ^id(float pt) {
         _valueTemp = [self get_toValueFromValue:@encode(float), pt];

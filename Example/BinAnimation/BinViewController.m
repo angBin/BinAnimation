@@ -11,8 +11,6 @@
 
 @interface BinViewController ()
 
-@property (nonatomic, strong) UIView *testView;
-
 @end
 
 @implementation BinViewController
@@ -21,23 +19,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    self.testView.center = self.view.center;
-    self.testView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.testView];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.testView.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
-        founder.toKeyframe.scaleX(0.5).scaleY(0.5).keyTime(0.5).autoreverses(YES).repeatCount(CGFLOAT_MAX);
-    }];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    NSArray *animationArr = @[@"SpringAnimation", @"KeyframeAnimation", @"TransitionAnimation", @"AnimationGroup", ];
+    for (uint8_t i = 0; i < animationArr.count; i++) {
+        UIButton *animationBut = [[UIButton alloc] initWithFrame:CGRectMake(25, 100 + 70 * i, screenWidth - 50, 50)];
+        animationBut.layer.borderWidth = 1.0;
+        animationBut.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        [animationBut setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [animationBut setTitle:animationArr[i] forState:UIControlStateNormal];
+        [animationBut addTarget:self action:@selector(animationBut:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:animationBut];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)animationBut:(UIButton *)button {
+    NSString *animationViewControllerString = [NSString stringWithFormat:@"Bin%@ViewController", button.titleLabel.text];
+    UIViewController *animationViewController = [[NSClassFromString(animationViewControllerString) alloc] init];
+    [self.navigationController pushViewController:animationViewController animated:YES];
 }
 
 @end
