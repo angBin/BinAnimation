@@ -189,8 +189,11 @@ NSString *const BinKeyframeAnimationGetKeyframeAnimationFirstValue = @"getKeyfra
 }
 
 - (void)dealloc {
-    if ([[NSThread  callStackSymbols][3] containsString:@"BinKeyframeFactory"]) {
-        return;
+    NSArray *callStackSymbols = [NSThread  callStackSymbols];
+    for (NSString *stack in callStackSymbols) {
+        if ([stack containsString:@"BinKeyframeFactory"]) {
+            return;
+        }
     }
     [self getKeyframeAnimation];
 }

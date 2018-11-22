@@ -158,17 +158,17 @@
 
 - (CAAnimation *)currentAnimation {
     if (!_currentAnimation) {
-        NSArray *stackSymbolsArr = [NSThread  callStackSymbols];
-        if ([((NSString *)stackSymbolsArr[1]).lowercaseString containsString:@"keyframe"]) {
+        NSString *callStackSymbol = [NSThread  callStackSymbols][1].lowercaseString;
+        if ([callStackSymbol containsString:@"keyframe"]) {
             CAKeyframeAnimation *animationTemp = [CAKeyframeAnimation animation];
             _currentAnimation = animationTemp;
-        } else if ([((NSString *)stackSymbolsArr[1]).lowercaseString containsString:@"animationgroup"]) {
+        } else if ([callStackSymbol containsString:@"animationgroup"]) {
             CAAnimationGroup *animationTemp = [CAAnimationGroup animation];
             _currentAnimation = animationTemp;
-        } else if ([((NSString *)stackSymbolsArr[1]).lowercaseString containsString:@"spring"]) {
+        } else if ([callStackSymbol containsString:@"spring"]) {
             CASpringAnimation *animationTemp = [CASpringAnimation animation];
             _currentAnimation = animationTemp;
-        } else if ([((NSString *)stackSymbolsArr[1]).lowercaseString containsString:@"transition"]) {
+        } else if ([callStackSymbol containsString:@"transition"]) {
             CATransition *animationTemp = [CATransition animation];
             _currentAnimation = animationTemp;
         }
