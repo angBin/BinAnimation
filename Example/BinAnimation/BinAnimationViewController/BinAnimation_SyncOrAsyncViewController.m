@@ -38,9 +38,12 @@
     NSUInteger index = [self.animationArr indexOfObject:animationStr];
     switch (index) {
         case 0:
-            [self.layerArr bin_addSameAnimation_sync:^(BinAnimationFounder *founder) {
+        {
+            NSArray *animationArr = [self.layerArr bin_addSameAnimation_sync:^(BinAnimationFounder *founder) {
                 founder.toKeyframe.scaleX(0.2).scaleY(0.2).keyTime(1.0).autoreverses(YES);
             }];
+            NSLog(@"AnimationArray: %@", animationArr); // [{@"layer" : layer, @"animationArray" : animationArr}, ...]
+        }
             break;
         case 1:
             [self.layerArr bin_addSameAnimation_async:^(BinAnimationFounder *founder) {
