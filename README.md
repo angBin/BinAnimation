@@ -36,8 +36,7 @@
 ###### KeyframeAnimation
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/KeyframeAnimation.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/KeyframeAnimation.gif">
 </p>
 
 ```obj-c
@@ -66,8 +65,7 @@ break;
 ###### SpringAnimation
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/SpringAnimation.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/SpringAnimation.gif">
 </p>
 
 ```obj-c
@@ -87,8 +85,7 @@ break;
 ###### TransitionAnimation
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/TransitionAnimation.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/TransitionAnimation.gif">
 </p>
 
 ```obj-c
@@ -131,8 +128,7 @@ break;
 * 待完善。。。
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/AnimationGroup.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/AnimationGroup.gif">
 </p>
 
 ```obj-c
@@ -156,8 +152,7 @@ break;
 * 支持动画的暂停与继续
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_PauseAndResume.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_PauseAndResume.gif">
 </p>
 
 ```obj-c
@@ -174,8 +169,7 @@ break;
 * 支持动画完成后回调
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_CompletionBlock.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_CompletionBlock.gif">
 </p>
 
 ```obj-c
@@ -201,8 +195,7 @@ break;
 * 对大量 layer 进行同步添加的话，会明显感觉到延迟，如果是在主线程中调用则会造成卡顿。如果是异步添加的话，会有明显改善。
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_SyncOrAsync.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_SyncOrAsync.gif">
 </p>
 
 ```obj-c
@@ -230,8 +223,7 @@ break;
 * 对大量 layer 同步添加相同的动画时，会明显感觉到延迟，如果是在主线程中调用则会造成卡顿。如果是添加同一个动画的话，会有明显改善。
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_OneOrSome.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/Animation_OneOrSome.gif">
 </p>
 
 ```obj-c
@@ -252,8 +244,7 @@ break;
 * 支持设置帧动画的第一帧以及帧的定点定位和增量定位
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/KeyframeAnimation_FromOrToOrBy.gif
-">
+  <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/KeyframeAnimation_FromOrToOrBy.gif">
 </p>
 
 ```obj-c
