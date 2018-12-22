@@ -15,10 +15,11 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
     
     BinViewController *viewC = [[BinViewController alloc] init];
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:viewC];
+    // 避免viewC被navC的导航栏遮挡
+    navC.navigationBar.translucent = NO;
     self.window.rootViewController = navC;
     
     [self.window makeKeyAndVisible];

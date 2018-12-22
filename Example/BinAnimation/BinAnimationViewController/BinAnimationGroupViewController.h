@@ -6,11 +6,11 @@
 //  Copyright © 2018 angBin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BinBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BinAnimationGroupViewController : UIViewController
+@interface BinAnimationGroupViewController : BinBaseViewController
 
 @end
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2018 angBin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BinBaseViewController.h"
 
-@interface BinViewController : UIViewController
+@interface BinViewController : BinBaseViewController
 
 @end

@@ -1,25 +1,25 @@
 //
-//  BinSpringAnimationViewController.m
+//  BinAnimation_CompletionBlockViewController.m
 //  BinAnimation_Example
 //
-//  Created by angBin on 2018/10/18.
+//  Created by angBin on 2018/12/19.
 //  Copyright © 2018 angBin. All rights reserved.
 //
 
-#import "BinSpringAnimationViewController.h"
+#import "BinAnimation_CompletionBlockViewController.h"
 #import "BinExamplePublic.h"
 
-@interface BinSpringAnimationViewController ()
+@interface BinAnimation_CompletionBlockViewController ()
 
 @end
 
-@implementation BinSpringAnimationViewController
+@implementation BinAnimation_CompletionBlockViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.animationArr = @[@"position", @"opacity", ];
+    self.animationArr = @[@"without completion block", @"with completion block", ];
 }
 
 - (void)tableViewDidClick:(NSString *)animationStr {
@@ -27,14 +27,17 @@
     switch (index) {
         case 0:
             [self.animationlabel.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
-                founder.springAnimation.mass(1).stiffness(50).damping(2).initialVelocity(10).byValue([NSValue valueWithCGSize:CGSizeMake(0, 200)]);
+                founder.toKeyframe.translationY(200).keyTime(1.0).autoreverses(YES);
             }];
             break;
         case 1:
+        {
             [self.animationlabel.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
-                founder.moreSpringAnimation(@"opacity").mass(1).stiffness(50).damping(2).initialVelocity(10).
-                toValue(@0);
+                founder.toKeyframe.translationY(200).keyTime(1.0).autoreverses(YES);
+            } completion:^(BinAnimationInfo *animationInfo) {
+                [self changeColor];
             }];
+        }
             break;
             
         default:

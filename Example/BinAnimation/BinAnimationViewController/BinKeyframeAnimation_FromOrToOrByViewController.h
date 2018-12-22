@@ -1,8 +1,8 @@
 //
-//  BinSpringAnimationViewController.h
+//  BinKeyframeAnimation_FromOrToOrByViewController.h
 //  BinAnimation_Example
 //
-//  Created by angBin on 2018/10/18.
+//  Created by angBin on 2018/12/21.
 //  Copyright © 2018 angBin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BinSpringAnimationViewController : BinBaseViewController
+@interface BinKeyframeAnimation_FromOrToOrByViewController : BinBaseViewController
 
 @end
 

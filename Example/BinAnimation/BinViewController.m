@@ -7,7 +7,7 @@
 //
 
 #import "BinViewController.h"
-#import "BinAnimation.h"
+#import "BinExamplePublic.h"
 
 @interface BinViewController ()
 
@@ -19,23 +19,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    // 避免viewC被navC的导航栏遮挡，以下两种方法都可以实现，但是已经在AppDelegate中使用了方法二，所以此处不再重复
+//    self.edgesForExtendedLayout = NO;
+//    self.navigationController.navigationBar.translucent = NO;
     
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    NSArray *animationArr = @[@"SpringAnimation", @"KeyframeAnimation", @"TransitionAnimation", @"AnimationGroup", ];
-    for (uint8_t i = 0; i < animationArr.count; i++) {
-        UIButton *animationBut = [[UIButton alloc] initWithFrame:CGRectMake(25, 100 + 70 * i, screenWidth - 50, 50)];
-        animationBut.layer.borderWidth = 1.0;
-        animationBut.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        [animationBut setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [animationBut setTitle:animationArr[i] forState:UIControlStateNormal];
-        [animationBut addTarget:self action:@selector(animationBut:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:animationBut];
-    }
+    self.title = @"BinAnimationExample";
+    
+    [self.animationlabel removeFromSuperview];
+    self.animationlabel = nil;
+    CGRect animationTableViewFrame = self.animationTableView.frame;
+    animationTableViewFrame.origin.y = 0;
+    animationTableViewFrame.size.height = bin_heightExceptNavBar();
+    self.animationTableView.frame = animationTableViewFrame;
+    self.animationArr = @[@"KeyframeAnimation", @"SpringAnimation", @"TransitionAnimation", @"AnimationGroup", @"Animation_PauseAndResume", @"Animation_CompletionBlock", @"Animation_SyncOrAsync", @"Animation_OneOrSome", @"KeyframeAnimation_FromOrToOrBy", ];
 }
 
-- (void)animationBut:(UIButton *)button {
-    NSString *animationViewControllerString = [NSString stringWithFormat:@"Bin%@ViewController", button.titleLabel.text];
+- (void)tableViewDidClick:(NSString *)animationStr {
+    NSString *animationViewControllerString = [NSString stringWithFormat:@"Bin%@ViewController", animationStr];
     UIViewController *animationViewController = [[NSClassFromString(animationViewControllerString) alloc] init];
     [self.navigationController pushViewController:animationViewController animated:YES];
 }
