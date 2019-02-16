@@ -29,6 +29,7 @@
 		A31F78CC21CA2EDE00D01D0B /* BinAnimation_SyncOrAsyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31F78CB21CA2EDE00D01D0B /* BinAnimation_SyncOrAsyncViewController.m */; };
 		A31F78CF21CA2F0900D01D0B /* BinAnimation_CompletionBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31F78CE21CA2F0900D01D0B /* BinAnimation_CompletionBlockViewController.m */; };
 		A31F78D221CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31F78D121CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.m */; };
+		A374185D2217AB3700E9EEC9 /* BinMultiAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A374185C2217AB3700E9EEC9 /* BinMultiAnimationViewController.m */; };
 		A3B9787621CCF0C200DADA78 /* BinAnimation_OneOrSomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B9787521CCF0C200DADA78 /* BinAnimation_OneOrSomeViewController.m */; };
 		A3B9787921CCF56900DADA78 /* BinKeyframeAnimation_FromOrToOrByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B9787821CCF56900DADA78 /* BinKeyframeAnimation_FromOrToOrByViewController.m */; };
 		A3FD3FC42178534400FB2A40 /* BinSpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FD3FC32178534400FB2A40 /* BinSpringAnimationViewController.m */; };
@@ -83,6 +84,8 @@
 		A31F78CE21CA2F0900D01D0B /* BinAnimation_CompletionBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinAnimation_CompletionBlockViewController.m; sourceTree = "<group>"; };
 		A31F78D021CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinAnimation_PauseAndResumeViewController.h; sourceTree = "<group>"; };
 		A31F78D121CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinAnimation_PauseAndResumeViewController.m; sourceTree = "<group>"; };
+		A374185B2217AB3700E9EEC9 /* BinMultiAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinMultiAnimationViewController.h; sourceTree = "<group>"; };
+		A374185C2217AB3700E9EEC9 /* BinMultiAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinMultiAnimationViewController.m; sourceTree = "<group>"; };
 		A3B9787421CCF0C200DADA78 /* BinAnimation_OneOrSomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinAnimation_OneOrSomeViewController.h; sourceTree = "<group>"; };
 		A3B9787521CCF0C200DADA78 /* BinAnimation_OneOrSomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinAnimation_OneOrSomeViewController.m; sourceTree = "<group>"; };
 		A3B9787721CCF56900DADA78 /* BinKeyframeAnimation_FromOrToOrByViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinKeyframeAnimation_FromOrToOrByViewController.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				A3FD3FC32178534400FB2A40 /* BinSpringAnimationViewController.m */,
 				A3FD3FC82179AC7000FB2A40 /* BinTransitionAnimationViewController.h */,
 				A3FD3FC92179AC7000FB2A40 /* BinTransitionAnimationViewController.m */,
+				A374185B2217AB3700E9EEC9 /* BinMultiAnimationViewController.h */,
+				A374185C2217AB3700E9EEC9 /* BinMultiAnimationViewController.m */,
 				A3FD3FCB2179AC7C00FB2A40 /* BinAnimationGroupViewController.h */,
 				A3FD3FCC2179AC7C00FB2A40 /* BinAnimationGroupViewController.m */,
 				A31F78D021CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.h */,
@@ -312,8 +317,7 @@
 				ORGANIZATIONNAME = angBin;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 6NRN9YF242;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -467,6 +471,7 @@
 				A3FD3FCA2179AC7000FB2A40 /* BinTransitionAnimationViewController.m in Sources */,
 				A31F78D221CA4AFF00D01D0B /* BinAnimation_PauseAndResumeViewController.m in Sources */,
 				A3B9787921CCF56900DADA78 /* BinKeyframeAnimation_FromOrToOrByViewController.m in Sources */,
+				A374185D2217AB3700E9EEC9 /* BinMultiAnimationViewController.m in Sources */,
 				A3B9787621CCF0C200DADA78 /* BinAnimation_OneOrSomeViewController.m in Sources */,
 				A31F78CC21CA2EDE00D01D0B /* BinAnimation_SyncOrAsyncViewController.m in Sources */,
 				A3FD3FCD2179AC7C00FB2A40 /* BinAnimationGroupViewController.m in Sources */,
@@ -626,16 +631,17 @@
 			baseConfigurationReference = 454CE238AC45ADA15F02F473 /* Pods-BinAnimation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 6NRN9YF242;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BinAnimation/BinAnimation-Prefix.pch";
 				INFOPLIST_FILE = "BinAnimation/BinAnimation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotile.smartFotileStyleMix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.angBin.BinAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = FotileSmartMix_developer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -645,17 +651,17 @@
 			baseConfigurationReference = D7A1A2913FE4A6A6EC67C427 /* Pods-BinAnimation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 6NRN9YF242;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BinAnimation/BinAnimation-Prefix.pch";
 				INFOPLIST_FILE = "BinAnimation/BinAnimation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotile.smartFotileStyleMix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.angBin.BinAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = smartMixProfileUP;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

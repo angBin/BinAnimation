@@ -31,7 +31,7 @@
     animationTableViewFrame.origin.y = 0;
     animationTableViewFrame.size.height = bin_heightExceptNavBar();
     self.animationTableView.frame = animationTableViewFrame;
-    self.animationArr = @[@"KeyframeAnimation", @"SpringAnimation", @"TransitionAnimation", @"AnimationGroup", @"Animation_PauseAndResume", @"Animation_CompletionBlock", @"Animation_SyncOrAsync", @"Animation_OneOrSome", @"KeyframeAnimation_FromOrToOrBy", ];
+    self.animationArr = @[@"KeyframeAnimation", @"SpringAnimation", @"TransitionAnimation", @"MultiAnimation", @"AnimationGroup", @"Animation_PauseAndResume", @"Animation_CompletionBlock", @"Animation_SyncOrAsync", @"Animation_OneOrSome", @"KeyframeAnimation_FromOrToOrBy", ];
 }
 
 - (void)tableViewDidClick:(NSString *)animationStr {
