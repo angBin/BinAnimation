@@ -123,15 +123,17 @@ case 3:
 break;
 ```
 
-###### AnimationGroup
+###### MultiAnimation 和 AnimationGroup
 
-* 待完善。。。
+* MultiAnimation：在 layer 上添加多组动画，各动画是完全独立；
+* AnimationGroup：在 layer 上添加一个组动画，该组动画可包含多组动画，组动画的属性可能会影响各动画的相关属性。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/angBin/BinAnimation/master/Resources/AnimationGroup.gif">
 </p>
 
 ```obj-c
+// MultiAnimation
 case 0:
 [self.animationlabel.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
     founder.springAnimation.mass(1).stiffness(50).damping(2).initialVelocity(10).byValue([NSValue valueWithCGSize:CGSizeMake(0, 200)]);
@@ -143,6 +145,26 @@ case 1:
     founder.toKeyframe.translationY(200).keyTime(1.0).autoreverses(YES);
     [founder keyframeAnimation];
     founder.toKeyframe.opacity(0.0).keyTime(1.0).autoreverses(YES);
+}];
+break;
+
+// AnimationGroup
+case 0:
+[self.animationlabel.layer removeAllAnimations];
+[self.animationlabel.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
+    float settlingDuration = 0;
+    founder.springAnimation.mass(1).stiffness(50).damping(2).initialVelocity(10).byValue([NSValue valueWithCGSize:CGSizeMake(0, 200)]).getSettlingDuration(&settlingDuration);
+    founder.toKeyframe.scaleX(0.2).scaleY(0.2).keyTime(settlingDuration);
+    founder.animationGroup.duration(settlingDuration + 1.0).repeatCount(100);
+}];
+break;
+case 1:
+[self.animationlabel.layer removeAllAnimations];
+[self.animationlabel.layer bin_addAnimation_sync:^(BinAnimationFounder *founder) {
+    founder.toKeyframe.translationY(200).keyTime(1.0);
+    [founder keyframeAnimation];
+    founder.toKeyframe.opacity(0.0).keyTime(1.0).autoreverses(YES);
+    founder.animationGroup.duration(2.0).repeatCount(100);
 }];
 break;
 ```
